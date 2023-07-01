@@ -20,3 +20,10 @@ async def echo_message(message: types.Message):
   
     #ответить пользователю
     await message.answer(message.from_user.id, message.text)
+
+#если наш файл главный
+if __name__ == "__main__":
+    #стартуем бота
+    executor.start_polling(dp, skip_updates=True)
+
+#информация взята с сайта - https://surik00.gitbooks.io/aiogram-lessons/content/chapter1.html
